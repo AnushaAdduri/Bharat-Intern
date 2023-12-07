@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <link rel="icon" href="IMAGES/for.png" type="text/x-icon">
+    <style>
+        body {
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220112/pngtree-glass-morphim-effect-registration-banner-with-gradient-blue-image_934693.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #centered-form {
+            text-align: center;
+        }
+
+        fieldset {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            console.log("Form submitted!");
+            console.log("FormData:", new FormData(event.target));
+            event.target.reset();
+        }
+    </script>
+</head>
+
+<body>
+    <h1 align="center"><u>FORMS TAGS</u></h1>
+    <div id="centered-form">
+        <form action="submit.html" method="post" onsubmit="submitForm(event)">
+            <fieldset>
+                <legend><b><u>Student Details</u></b></legend>
+                <label for="name">SURNAME</label><br>
+                <input type="text" name="name" id="name" value="your name"/><br><br>
+                <label for="name 2">FIRST NAME</label><br>
+                <input type="text" name="name" id="name 2" placeholder="fname"/><br><br>
+                <label for="name 3">MIDDLE NAME</label><br>
+                <input type="text" name="name" id="name 3" placeholder="mname"/><br><br>
+                <label for="name 4">LAST NAME</label><br>
+                <input type="text" name="name" id="name 4" placeholder="lname"/><br><br>
+                <label for="name 5">EMAIL</label><br>
+                <input type="email" id="name 5" placeholder="***@gmail" /><br><br>
+                <label for="name 1">PASSWORD</label><br>
+                <input type="password" name="name" id="name 1" placeholder="Enter ur password" /><br><br>
+                <p>Description:-</p>
+                <textarea name="" id="" cols="30" rows="4"></textarea>
+                <br><br>
+                <p><b><font size="4" color="red">GENDER</font></b></p>
+                <input type="radio" name="gender" id="">MALE
+                <input type="radio" name="gender" id="">FEMALE
+                <input type="radio" name="gender" id="">OTHERS <br><br>
+                <p><font size="5"color="red">SELECT COURSE</font></p>
+                <input type="checkbox" name="" id="">DAA
+                <input type="checkbox" name="" id="">C++
+                <input type="checkbox" name="" id="">DBMS
+                <input type="checkbox" name="" id="">DS
+                <input type="checkbox" name="" id="">HTML <br><br>
+                <p><font size="4" color="red">SELECT COLLAGE</font></p>
+                <select name="collage" id="">
+                    <option value="rgukt">RGUKTSKLM</option>
+                    <option value="rgukt">RGUKTNVZ</option>
+                    <option value="rgukt">RGUKTRKVALLY</option>
+                    <option value="rgukt">RGUKTONGOLE</option>
+                    <option value="rgukt">RGUKTBASARA</option>
+                </select>
+                <br><br><br>
+                <input type="file"  name="fileupload" accept = "image/*" />
+                <br><br><br><br>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
